@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJsMVCmongoDB", "AngularJsMVCmongoDB\AngularJsMVCmongoDB.csproj", "{D0794013-E91E-40CB-BD7C-72799F59C9FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{29E8B476-35FC-415B-97C4-90FCD398C2D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{F8984EBE-FA5B-4F5E-A9AE-7C278483D0AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{CFFA2823-922A-4AEF-B130-ACB69296EB19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0794013-E91E-40CB-BD7C-72799F59C9FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0794013-E91E-40CB-BD7C-72799F59C9FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0794013-E91E-40CB-BD7C-72799F59C9FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0794013-E91E-40CB-BD7C-72799F59C9FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E8B476-35FC-415B-97C4-90FCD398C2D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E8B476-35FC-415B-97C4-90FCD398C2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E8B476-35FC-415B-97C4-90FCD398C2D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E8B476-35FC-415B-97C4-90FCD398C2D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8984EBE-FA5B-4F5E-A9AE-7C278483D0AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8984EBE-FA5B-4F5E-A9AE-7C278483D0AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8984EBE-FA5B-4F5E-A9AE-7C278483D0AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8984EBE-FA5B-4F5E-A9AE-7C278483D0AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFFA2823-922A-4AEF-B130-ACB69296EB19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFFA2823-922A-4AEF-B130-ACB69296EB19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFFA2823-922A-4AEF-B130-ACB69296EB19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFFA2823-922A-4AEF-B130-ACB69296EB19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,151 @@
+﻿<div class="container">
+    <form name="sampleUpdateDataInformation" class="form-horizontal" angular-validator-submit="updateSample()" novalidate angular-validator>        
+        <div class="body-content">
+            {{d}}
+            <div class="row">
+                <h4>Basic</h4>
+                <hr />
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6 form-group">
+                        <div class="col-md-3"><label class="control-label">First Name</label></div>
+                        <div class="col-md-9">
+                            <input type="text"
+                                   class="form-control"
+                                   name="firstName"
+                                   ng-model="getEditSample.firstName"
+                                   validate-on="dirty"
+                                   required
+                                   ng-maxlength="20"
+                                   ng-minlength="6"
+                                   required-message="'This field is required..'"
+                                   invalid-message="'Invalid email value.'" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <div class="col-md-3"><label class="control-label">Last Name</label></div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="lastName"
+                                   ng-model="getEditSample.lastName"
+                                   validate-on="dirty"
+                                   required
+                                   ng-maxlength="20"
+                                   ng-minlength="6"
+                                   required-message="'This field is required..'"
+                                   invalid-message="'Invalid lastName value.'" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-offset-6 col-md-6 form-group">
+                        <div class="col-md-3"><label class="control-label">Age</label></div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="age"
+                                   ng-model="getEditSample.age"
+                                   validate-on="dirty"
+                                   required
+                                   ng-pattern="/^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|100)$/"
+                                   required-message="'This field is required..'"
+                                   invalid-message="'Invalid age value.'" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Address</h4><hr />
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6 form-group">
+                        <div class="col-md-3"><label class="control-label">Street </label></div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="street"
+                                   ng-model="getEditSample.address.streetAddress"
+                                   validate-on="dirty"
+                                   required
+                                   required-message="'This field is required..'"
+                                   invalid-message="'Invalid street value.'" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <div class="col-md-3"><label class="control-label">City</label></div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="city"
+                                   ng-model="getEditSample.address.city"
+                                   validate-on="dirty"
+                                   required
+                                   required-message="'This field is required..'"
+                                   invalid-message="'Invalid city value.'" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6 form-group">
+                        <div class="col-md-3"><label class="control-label">State</label></div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="state"
+                                   ng-model="getEditSample.address.state"
+                                   validate-on="dirty"
+                                   required
+                                   required-message="'This field is required..'"
+                                   invalid-message="'Invalid state value.'" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <div class="col-md-3"><label class="control-label">Postal Code</label></div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="postalCode"
+                                   ng-model="getEditSample.address.postalCode"
+                                   validate-on="dirty"
+                                   required
+                                   ng-pattern="/^\d{6}$/"
+                                   required-message="'This field postalCode is required..'"
+                                   invalid-message="'Invalid postalCode value.'" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Phone Number</h4><hr />
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6 form-group">
+                        <div class="col-md-3"><label class="control-label">Home</label> </div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="home"
+                                   ng-model="getEditSample.phoneNumber[0].number"
+                                   validate-on="dirty"
+                                   required
+                                   ng-pattern="/^[789]\d{9}$/"
+                                   required-message="'This field is required..'"
+                                   invalid-message="'Invalid home value.'" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <div class="col-md-3"><label class="control-label">Fax</label></div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="fax"
+                                   ng-model="getEditSample.phoneNumber[1].number"
+                                   validate-on="dirty"
+                                   required
+                                   ng-pattern="/^\+?[0-9]{7,}$/"
+                                   required-message="'This field is required..'"
+                                   invalid-message="'Invalid fax value.'" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-lg-offset-6 col-lg-6">
+                    <div class="col-md-3 pull-right">
+                        <button type="submit" ng-disabled="sampleUpdateDataInformation.$invalid" class="btn btn-primary btn-block btn-flat">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

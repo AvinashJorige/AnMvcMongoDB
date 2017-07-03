@@ -1,0 +1,54 @@
+﻿<div class="container" ng-controller="DefaultController as home">
+    <div class="jumbotron">
+        <h1>{{home.title}}</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-if="data && data.length == 0">
+                        <td colspan="7"><center>No data available...</center></td> 
+                    </tr>
+                    <tr ng-repeat="d in data">
+                        <td align="center">{{$index +1}}</td>
+                        <td>{{d.firstName}}</td>
+                        <td>{{d.lastName}}</td>
+                        <td>{{d.age}}</td>
+                        <td>
+                            <ul>
+                                <li>{{d.address.streetAddress}}</li>
+                                <li>{{d.address.city}}</li>
+                                <li>{{d.address.state}}</li>
+                                <li>{{d.address.postalCode}}</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul ng-repeat="subList in d.phoneNumber">
+                                <li>{{subList.type}} : {{subList.number}}</li>                                
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="col-md-2">
+                                <a href="" ui-sref="editSample({sampleId : d.Id})" ng-model="d.Id">Edit</a>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="" ng-model="d.Id" ng-click="getDeleteSample(d.Id)">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
